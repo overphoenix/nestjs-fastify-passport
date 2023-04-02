@@ -21,6 +21,9 @@
     "index.js",
     "index.d.ts"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@fastify/passport": "^2.2.0",
     "@fastify/secure-session": "^6.0.0",

@@ -109,16 +109,20 @@ const createPassportContext =
   (request, response) => (type, options, callback: Function) => {
     return new Promise<void>(async (resolve, reject) => {
       try {
-        return await request.passport.authenticate(type, options, (request, reply, err, user, info, status) => {
-          try {
-            request.authInfo = info;
-            return resolve(callback(err, user, info, status));
-          } catch (err) {
-            reject(err);
+        return await request.passport.authenticate(
+          type,
+          options,
+          (request, reply, err, user, info, status) => {
+            try {
+              request.authInfo = info;
+              return resolve(callback(err, user, info, status));
+            } catch (err) {
+              reject(err);
+            }
           }
-        })(request, response);
+        )(request, response);
       } catch (error) {
         reject(error);
       }
     });
-  }
+  };
