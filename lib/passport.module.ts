@@ -1,4 +1,7 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
+import { DynamicModule, Module, OnModuleInit, Provider } from '@nestjs/common';
+import { HttpAdapterHost } from '@nestjs/core';
+import passport from '@fastify/passport';
+
 import {
   AuthModuleAsyncOptions,
   AuthModuleOptions,
@@ -7,7 +10,15 @@ import {
 } from './interfaces/auth-module.options';
 
 @Module({})
-export class PassportModule {
+export class PassportModule implements OnModuleInit {
+  constructor(private readonly adapterHost: HttpAdapterHost<any>) {}
+
+  async onModuleInit(): Promise<void> {
+    const httpInstance = this.adapterHost.httpAdapter.getInstance();
+    await httpInstance.register(passport.initialize());
+    await httpInstance.register(passport.secureSession());
+  }
+
   static register(options: IAuthModuleOptions): DynamicModule {
     return {
       module: PassportModule,

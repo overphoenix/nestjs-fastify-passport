@@ -1,8 +1,8 @@
 {
-  "name": "@nestjs/passport",
-  "version": "9.0.3",
-  "description": "Nest - modern, fast, powerful node.js web framework (@passport)",
-  "author": "Kamil Mysliwiec",
+  "name": "@recalibratedsystems/nestjs-fastify-passport",
+  "version": "9.0.0",
+  "description": "Nest - modern, fast, powerful node.js web framework (@fastify/passport)",
+  "author": "Kamil Mysliwiec & Overphoenix",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
@@ -22,34 +22,36 @@
     "index.d.ts"
   ],
   "peerDependencies": {
-    "@nestjs/common": "^8.0.0 || ^9.0.0",
-    "passport": "^0.4.0 || ^0.5.0 || ^0.6.0"
+    "@fastify/passport": "^2.2.0",
+    "@fastify/secure-session": "^6.0.0",
+    "@nestjs/common": "^8.0.0 || ^9.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.5.1",
     "@commitlint/config-angular": "17.4.4",
+    "@fastify/passport": "^2.2.0",
+    "@fastify/secure-session": "^6.0.0",
     "@nestjs/common": "9.3.12",
     "@nestjs/core": "9.3.12",
     "@nestjs/jwt": "10.0.3",
-    "@nestjs/platform-express": "9.3.12",
+    "@nestjs/platform-fastify": "^9.3.12",
     "@nestjs/testing": "9.3.12",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
-    "@types/passport": "1.0.12",
-    "@types/passport-jwt": "3.0.8",
-    "@types/passport-local": "1.0.35",
+    "@types/passport-jwt": "^3.0.8",
+    "@types/passport-local": "^1.0.35",
     "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "5.57.0",
     "eslint": "8.37.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.27.5",
+    "fastify": "^4.15.0",
     "husky": "8.0.3",
     "jest": "29.5.0",
     "lint-staged": "13.2.0",
     "pactum": "3.3.3",
-    "passport": "0.6.0",
-    "passport-jwt": "4.0.1",
-    "passport-local": "1.0.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
     "prettier": "2.8.7",
     "reflect-metadata": "0.1.13",
     "release-it": "15.10.0",
@@ -63,6 +65,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nestjs/passport"
+    "url": "https://github.com/overphoenix/nestjs-fastify-passport"
   }
 }

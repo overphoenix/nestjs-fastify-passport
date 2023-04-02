@@ -26,12 +26,12 @@
 
 ## Description
 
-[Passport](http://www.passportjs.org/) utilities module for [Nest](https://github.com/nestjs/nest).
+[@factify/passport](https://github.com/fastify/fastify-passport) utilities module for [Nest](https://github.com/nestjs/nest).
 
 ## Installation
 
 ```bash
-$ npm i --save @nestjs/passport passport
+$ npm i --save @recalibratedsystems/nestjs-fastify-passport
 ```
 
 ## Quick Start
