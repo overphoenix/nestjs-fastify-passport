@@ -26,7 +26,7 @@
 
 ## Description
 
-[@factify/passport](https://github.com/fastify/fastify-passport) utilities module for [Nest](https://github.com/nestjs/nest).
+[@fastify/passport](https://github.com/fastify/fastify-passport) utilities module for [Nest](https://github.com/nestjs/nest).
 
 ## Installation
 

@@ -109,21 +109,22 @@ function createAuthGuard(type?: string | string[]): Type<IAuthGuard> {
 }
 
 const createPassportContext =
-  (request, response) => (type, options, callback: Function) => {
+  (req, res) => (type, options, callback: Function) => {
     return new Promise<void>(async (resolve, reject) => {
       try {
-        return await request.passport.authenticate(
+        return await req.passport.authenticate(
           type,
           options,
           (request, reply, err, user, info, status) => {
             try {
               request.authInfo = info;
+              req.authInfo = info;
               return resolve(callback(err, user, info, status));
             } catch (err) {
               reject(err);
             }
           }
-        )(request, response);
+        )(req, res);
       } catch (error) {
         reject(error);
       }
