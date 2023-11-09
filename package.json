@@ -1,6 +1,6 @@
 {
   "name": "@recalibratedsystems/nestjs-fastify-passport",
-  "version": "10.0.2",
+  "version": "10.0.2-1",
   "description": "Nest - modern, fast, powerful node.js web framework (@fastify/passport)",
   "author": "Kamil Mysliwiec & Overphoenix",
   "license": "MIT",
